@@ -1,0 +1,38 @@
+[project]
+name = "typeddbapi"
+version = "1.0.1"
+description = "A lightweight, type-hinted wrapper around Python's DB-API 2.0."
+authors = [{ name = "Ashkan Feyzollahi", email = "ashkanfeyzollahi@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = []
+keywords = ["database", "foundation", "dbapi", "wrapper", "typed"]
+license = "MIT"
+
+[project.urls]
+homepage = "https://ashkanfeyzollahi.github.io/typeddbapi"
+repository = "https://github.com/ashkanfeyzollahi/typeddbapi"
+documentation = "https://ashkanfeyzollahi.github.io/typeddbapi/getting_started"
+"Bug Tracker" = "https://github.com/ashkanfeyzollahi/typeddbapi/issues"
+
+[tool.poetry]
+packages = [{ include = "typeddbapi", from = "src" }]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Database",
+    "Typing :: Typed",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "zensical (>=0.0.24,<0.0.25)",
+    "pytest-asyncio (>=1.3.0,<2.0.0)",
+    "aiosqlite (>=0.22.1,<0.23.0)",
+]
